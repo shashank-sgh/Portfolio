@@ -24,7 +24,7 @@ npm run build
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The local preview saves contact submissions as JSON in `.local-inbox/enquiries/`. Use `npm run dev:next` for live reload while editing the interface.
+Open [https://portfolio-1igw.vercel.app/](https://portfolio-1igw.vercel.app/). The local preview saves contact submissions as JSON in `.local-inbox/enquiries/`. Use `npm run dev:next` for live reload while editing the interface.
 
 ## Update the portfolio
 
