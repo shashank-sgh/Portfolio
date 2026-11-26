@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(585px, 77vh, 830px);
+  background: var(--hero);
+  color: #f7f5fa;
+  display: flex;
+  align-items: center;
+  padding: 76px max(6vw, calc((100vw - 1440px) / 2)) 98px;
+}
+.copy {
+  position: relative;
+  z-index: 3;
+  width: 55%;
+  pointer-events: none;
+  a {
+    pointer-events: auto;
+  }
+  h1 {
+    font-size: clamp(4.3rem, 7.7vw, 8.4rem);
+    line-height: 0.96;
+    letter-spacing: -0.068em;
+    margin: 30px 0 19px;
+    font-weight: 550;
+  }
+  em {
+    color: #c2abf8;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.07em;
+  }
+}
+.role {
+  font-size: clamp(1rem, 1.48vw, 1.45rem);
+  letter-spacing: -0.02em;
+  font-weight: 550;
+}
+.intro {
+  color: #c3bfca;
+  max-width: 455px;
+  line-height: 1.65;
+  font-size: 1rem;
+  margin: 12px 0 28px;
+}
+.art {
+  position: absolute;
+  inset: 0 -3% 0 42%;
+  background: radial-gradient(
+    ellipse at 53% 43%,
+    #5f4e80 0%,
+    #282135 37%,
+    transparent 70%
+  );
+  z-index: -1;
+}
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#b39ad00b 1px, transparent 1px),
+    linear-gradient(90deg, #b39ad00b 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse, black, transparent 78%);
+}
+.orbit {
+  position: absolute;
+  width: 72%;
+  aspect-ratio: 1;
+  left: 13%;
+  top: 9%;
+  border: 1px solid #bc9cf248;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 28px #bca2dd07,
+    inset 0 0 40px #a482ff15;
+}
+.portrait {
+  position: absolute;
+  right: 3%;
+  bottom: -28%;
+  height: 120%;
+  width: 49%;
+  object-fit: contain;
+  object-position: center top;
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  right: 6%;
+  border-top: 1px solid #ffffff29;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  font: 0.75rem monospace;
+  letter-spacing: 0.1em;
+  color: #c9c3d0;
+}
+@media (max-width: 750px) {
+  .hero {
+    min-height: 0;
+    padding: 54px 6% 230px;
+    align-items: flex-start;
+  }
+  .copy {
+    width: 100%;
+  }
+  .copy h1 {
+    font-size: clamp(3.15rem, 12vw, 5rem);
+    margin: 20px 0 12px;
+  }
+  .intro {
+    max-width: 33rem;
+  }
+  .portrait {
+    height: 310px;
+    width: 52%;
+    bottom: -50px;
+    right: 3%;
+  }
+  .art {
+    inset: 45% -15% -15% 28%;
+  }
+  .caption {
+    padding: 12px 0;
+  }
+  .caption span:last-child {
+    display: none;
+  }
+}
